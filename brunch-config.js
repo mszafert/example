@@ -2,10 +2,10 @@ exports.files = {
   javascripts: {
     joinTo: {
       'js/app.js': /^(app)/,
-      'js/vendor.js': /^node_modules/
-    }
+      'js/vendor.js': /^node_modules/,
+    },
   },
-  stylesheets: { joinTo: 'css/app.css' }
+  stylesheets: { joinTo: 'css/app.css' },
 };
 
 exports.plugins = {
@@ -13,19 +13,19 @@ exports.plugins = {
   pleeease: {
     sass: true,
     autoprefixer: {
-      browsers: ['> 1%']
-    }
+      browsers: ['> 1%'],
+    },
   },
   copycat: {
     fonts: ['node_modules/uikit/dist/fonts'],
-    onlyChanged: true
-  }
+    onlyChanged: true,
+  },
 };
 
 exports.modules = {
   autoRequire: {
-    'js/app.js': ['js/initialize']
-  }
+    'js/app.js': ['js/initialize'],
+  },
 };
 
 exports.npm = {
@@ -33,9 +33,9 @@ exports.npm = {
     $: 'jquery',
     jQuery: 'jquery',
     uikit: 'uikit',
-    jqueryValidation: 'jquery-validation'
+    jqueryValidation: 'jquery-validation',
   },
   styles: {
-    uikit: ['dist/css/uikit.css']
-  }
+    uikit: ['dist/css/uikit.css'],
+  },
 };
