@@ -1,0 +1,53 @@
+@charset 'utf-8';
+
+// variables
+$c-pgs: #ff7626;
+$c-white: #fff;
+$c-black: #000;
+$c-error: #d85030;
+
+* { box-sizing: border-box; }
+html, body { height: 100%; background-color: darken($c-white, 5%); }
+body, h1, h2, h3 { font-family: roboto, sans-serif; }
+header { border-bottom: 1px solid darken($c-white, 10%); background-color: $c-white;
+    h1 { margin: 35px 0; }
+}
+.nav { margin: 0; padding: 0; list-style: none;
+    li { display: block; float: left; margin-bottom: -1px;
+        & + li a { margin-left: 40px; }
+    }
+    a { display: block; padding-bottom: 7px; font-size: 16px; text-transform: uppercase; color: lighten($c-black, 50%); border-bottom: 1px solid transparent; }
+    .uk-active a, a:hover { text-decoration: none; border-bottom-color: $c-pgs; color: $c-pgs; }
+}
+.page-wrap { min-height: 100%; margin-bottom: -105px;
+    &:after { content: ''; display: block; height: 105px; }
+}
+.uk-container { max-width: 960px; }
+.uk-panel-box { padding-bottom: 30px; background-color: $c-white; border: 1px solid rgba($c-black, .25); }
+.uk-panel-badge { color: darken($c-white, 40%); }
+.uk-panel-teaser img { width: 100%; }
+#skicams-container .uk-panel-box { position: relative; padding: 20px 0 0;
+    h3 { margin-top: 0; }
+}
+.contact { min-height: 360px; }
+.contact-form { padding: 15% 25%; background-color: $c-white;
+    .uk-form-row { position: relative; }
+    input[type="text"], input[type="email"], textarea { padding-left: 0; padding-right: 0; font: 14px roboto, sans-serif; border: none; border-bottom: 1px solid darken($c-white, 10%); position: relative;
+        &:focus { border-bottom-color: darken($c-white, 25%); background-color: transparent; }
+    }
+    textarea { resize: none; }
+    .uk-form-danger { font-size: 12px; background: transparent !important; }
+    .uk-button-primary { padding-left: 25px; padding-right: 25px; border-radius: 4px; border: 1px solid rgba($c-black, .15); }
+}
+
+footer { padding-top: 15px; height: 105px; color: darken($c-white, 40%); background-color: lighten($c-black, 10%);
+    hr { border-top-color: lighten($c-black, 25%); }
+}
+
+@media (max-width: 375px) {
+    .nav {
+        li + li a { font-size: 14px; margin-left: 20px; }
+        .uk-active a { font-size: 14px !important; }
+    }
+    .contact-form { padding: 15%; }
+}
